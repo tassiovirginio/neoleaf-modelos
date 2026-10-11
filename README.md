@@ -1,32 +1,46 @@
 # NeoLeaf: modelos
 
 Modelos de LaTeX prontos para o catálogo do [NeoLeaf](https://neoleaf.science). Cada pasta é um modelo completo e
-autossuficiente: arquivo principal, bibliografia, estilo bibliográfico, imagens de exemplo e a classe, na versão usada.
-Foram compilados com pdfLaTeX (TeX Live 2026) antes de entrarem aqui.
+autossuficiente: arquivo principal, bibliografia ou estilo bibliográfico, imagens de exemplo e a classe, na versão usada.
+Todos foram compilados com pdfLaTeX (TeX Live 2026) numa cópia só com os arquivos da pasta antes de entrarem aqui.
 
 O catálogo do NeoLeaf guarda só o link e a versão (tag) de cada modelo. Os arquivos vêm deste repositório.
 
 ## Modelos
 
-| Pasta | Arquivo principal | Para que serve | Origem | Licença |
+| Pasta | Arquivo principal | Para que serve | Origem | Licença declarada |
 |---|---|---|---|---|
-| `acm-sigconf` | `sigconf.tex` | Artigos de conferências da ACM (formato sigconf) | [acmart](https://github.com/borisveytsman/acmart), v2.21 | LPPL 1.3c |
+| `acm-sigconf` | `sigconf.tex` | Conferências da ACM (sigconf) | [acmart](https://github.com/borisveytsman/acmart) v2.21 | LPPL 1.3c |
 | `acm-sigplan` | `sigplan.tex` | Conferências ACM SIGPLAN | acmart v2.21 | LPPL 1.3c |
-| `acm-acmsmall` | `acmsmall.tex` | Periódicos ACM (formato acmsmall) | acmart v2.21 | LPPL 1.3c |
-| `acm-acmtog` | `acmtog.tex` | Periódico ACM Transactions on Graphics | acmart v2.21 | LPPL 1.3c |
+| `acm-acmsmall` | `acmsmall.tex` | Periódicos ACM (acmsmall) | acmart v2.21 | LPPL 1.3c |
+| `acm-acmtog` | `acmtog.tex` | ACM Transactions on Graphics | acmart v2.21 | LPPL 1.3c |
+| `ieee-conferencia` | `bare_conf.tex` | Conferências IEEE | [IEEEtran](https://ctan.org/pkg/ieeetran) v1.8b (CTAN) | LPPL 1.3 |
+| `ieee-periodico` | `bare_jrnl.tex` | Periódicos IEEE | IEEEtran v1.8b (CTAN) | LPPL 1.3 |
+| `elsevier-numerico` | `elsarticle-template-num.tex` | Elsevier, citações numéricas | [elsarticle](https://ctan.org/pkg/elsarticle) v3.5 (CTAN) | LPPL 1.3 |
+| `elsevier-autor-ano` | `elsarticle-template-harv.tex` | Elsevier, citações autor-ano | elsarticle v3.5 (CTAN) | LPPL 1.3 |
+| `springer-lncs` | `main.tex` | Springer LNCS (modelo mínimo escrito para o NeoLeaf) | [llncs](https://ctan.org/pkg/llncs) v2.26 (CTAN) | CC BY 4.0, segundo o CTAN |
 
-## Como os arquivos foram gerados
+Arquivos de apoio que acompanham alguns modelos: `example-image-a.pdf` (pacote `mwe`, LPPL 1.3, em `elsevier-*`) e
+`aliascnt.sty` (pacote `aliascnt`, LPPL 1.3c, em `springer-lncs`).
 
-Os modelos da ACM vêm do repositório oficial `borisveytsman/acmart`, que guarda só os fontes (`.dtx` e `.ins`). Os arquivos
-foram gerados com `latex acmart.ins` (a classe `acmart.cls` e o estilo `ACM-Reference-Format.bst`) e `latex samples.ins`
-(os documentos de exemplo). Nenhum conteúdo foi alterado: os cabeçalhos de autoria e de licença continuam nos arquivos.
+## Como os arquivos foram obtidos
+
+- **ACM:** o repositório oficial guarda só os fontes (`.dtx` e `.ins`). Os arquivos foram gerados com `latex acmart.ins` e
+  `latex samples.ins`, sem alterar o conteúdo.
+- **IEEE e Elsevier:** copiados do pacote oficial no CTAN. Em `elsevier-*`, a classe `elsarticle.cls` foi gerada com
+  `latex elsarticle.ins`.
+- **Springer LNCS:** a classe `llncs.cls` e o estilo `splncs04.bst` vêm do CTAN. O `main.tex` e o `referencias.bib` são
+  um exemplo mínimo escrito para o NeoLeaf, porque o pacote do CTAN não traz um documento de modelo.
+
+Os cabeçalhos de autoria e de licença originais continuam nos arquivos. O texto da LPPL 1.3c está em
+`LICENSE-LPPL-1.3c.txt`.
 
 ## Licenças
 
-Cada modelo mantém a licença de quem o criou, indicada na tabela. O texto da LPPL 1.3c está em
-`LICENSE-ACMART-LPPL.txt`. Este repositório só reúne e organiza os arquivos; os direitos continuam com os autores.
-Se você é autor de um modelo e quer que ele saia daqui, abra uma issue.
+Cada modelo mantém a licença de quem o criou, indicada na tabela. A coluna mostra a licença **declarada** pela origem
+(nos arquivos ou no CTAN); este repositório não é uma análise jurídica. Ele só reúne e organiza os arquivos, e os direitos
+continuam com os autores. Se você é autor de algum modelo e quer que ele saia daqui, abra uma issue.
 
 ## Versões
 
-Use sempre uma tag (por exemplo `v1`) para o modelo não mudar sem aviso. O catálogo do NeoLeaf fixa a tag no cadastro.
+Use sempre uma tag (`v1`, `v2`...) para o modelo não mudar sem aviso. O catálogo do NeoLeaf fixa a tag no cadastro.

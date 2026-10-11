@@ -1,0 +1,52 @@
+\documentclass[runningheads]{llncs}
+%
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+
+\begin{document}
+%
+\title{Título do artigo para o LNCS}
+%
+\titlerunning{Título curto}
+%
+\author{Primeiro Autor\inst{1}\orcidID{0000-0000-0000-0000} \and
+Segundo Autor\inst{2}}
+%
+\authorrunning{P. Autor e S. Autor}
+%
+\institute{Instituição Um, Cidade, País\\
+\email{autor1@exemplo.org} \and
+Instituição Dois, Cidade, País\\
+\email{autor2@exemplo.org}}
+%
+\maketitle
+%
+\begin{abstract}
+Escreva aqui o resumo do artigo, com cerca de 150 a 250 palavras: o problema, o método,
+os principais resultados e a conclusão.
+\keywords{Primeira palavra-chave \and Segunda palavra-chave \and Terceira palavra-chave.}
+\end{abstract}
+
+\section{Introdução}
+Este é um modelo mínimo para artigos no formato Lecture Notes in Computer Science (LNCS), da Springer.
+Substitua o texto pelo seu. A classe \texttt{llncs} cuida da formatação, e as referências usam o estilo
+\texttt{splncs04}~\cite{exemplo}.
+
+\section{Método}
+Descreva o método. Equações, figuras e tabelas seguem os comandos habituais do \LaTeX.
+
+\begin{equation}
+  E = mc^2
+\end{equation}
+
+\section{Resultados}
+Apresente os resultados. Para citar outras seções, use \verb|\label| e \verb|\ref|, como em
+a Seção~\ref{sec:conclusao}.
+
+\section{Conclusão}\label{sec:conclusao}
+Resuma as conclusões e os trabalhos futuros.
+
+\bibliographystyle{splncs04}
+\bibliography{referencias}
+\end{document}
