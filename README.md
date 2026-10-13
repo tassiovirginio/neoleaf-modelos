@@ -20,8 +20,9 @@ O catálogo do NeoLeaf guarda só o link e a versão (tag) de cada modelo. Os ar
 | `elsevier-autor-ano` | `elsarticle-template-harv.tex` | Elsevier, citações autor-ano | elsarticle v3.5 (CTAN) | LPPL 1.3 |
 | `springer-lncs` | `main.tex` | Springer LNCS (modelo mínimo escrito para o NeoLeaf) | [llncs](https://ctan.org/pkg/llncs) v2.26 (CTAN) | CC BY 4.0, segundo o CTAN |
 
-Arquivos de apoio que acompanham alguns modelos: `example-image-a.pdf` (pacote `mwe`, LPPL 1.3, em `elsevier-*`) e
-`aliascnt.sty` (pacote `aliascnt`, LPPL 1.3c, em `springer-lncs`).
+Arquivo de apoio que acompanha alguns modelos: `example-image-a.pdf` (pacote `mwe`, LPPL 1.3, em `elsevier-*`).
+O `aliascnt.sty` deixou de ser incluído em `springer-lncs` (v3): a cópia do CTAN exigia um LaTeX mais novo que o do navegador;
+o NeoLeaf instala a versão compatível sozinho.
 
 ## Como os arquivos foram obtidos
 
@@ -31,6 +32,9 @@ Arquivos de apoio que acompanham alguns modelos: `example-image-a.pdf` (pacote `
   `latex elsarticle.ins`.
 - **Springer LNCS:** a classe `llncs.cls` e o estilo `splncs04.bst` vêm do CTAN. O `main.tex` e o `referencias.bib` são
   um exemplo mínimo escrito para o NeoLeaf, porque o pacote do CTAN não traz um documento de modelo.
+
+**Alteração na v3:** nos modelos `elsevier-*` e `springer-lncs` foi acrescentada a linha `\usepackage{lmodern}` (marcada com
+comentário), para os símbolos de texto (©, °) terem fonte vetorial na compilação no navegador. Nada mais foi alterado.
 
 Os cabeçalhos de autoria e de licença originais continuam nos arquivos. O texto da LPPL 1.3c está em
 `LICENSE-LPPL-1.3c.txt`.
